@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alcohol Prediction App</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+  
+    
+      h1 {
+        color: #f80606;
+        text-align: center;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="number"],
+      select {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #f11909;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      input[type="submit"]:hover {
+        background-color: #b3180d;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Alcohol Prediction App</h1>
+    <form action="/predict" method="post">
+      <label for="beer_servings">Beer Servings:</label>
+      <input
+        type="number"
+        id="beer_servings"
+        name="beer_servings"
+        step="0.1"
+        required
+      /><br />
+
+      <label for="spirit_servings">Spirit Servings:</label>
+      <input
+        type="number"
+        id="spirit_servings"
+        name="spirit_servings"
+        step="0.1"
+        required
+      /><br />
+
+      <label for="wine_servings">Wine Servings:</label>
+      <input
+        type="number"
+        id="wine_servings"
+        name="wine_servings"
+        step="0.1"
+        required
+      /><br />
+
+      <label for="continent">Continent:</label>
+      <select id="continent" name="continent" required>
+        <option value="Africa">Africa</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+        <option value="South America">South America</option>
+        <option value="North America">North America</option></select
+      ><br />
+
+      <input type="submit" value="Predict" />
+    </form>
+  </body>
+</html>
