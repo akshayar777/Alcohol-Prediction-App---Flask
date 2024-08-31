@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import pickle
 
-df = pd.read_csv('C:/Users/alokv/visualstudiocode/ICT/pythonapp/beer-servings.csv')
+df = pd.read_csv('beer-servings.csv')
 
 
 df = df.dropna(subset=['total_litres_of_pure_alcohol', 'beer_servings', 'spirit_servings', 'wine_servings', 'country', 'continent'])
